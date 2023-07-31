@@ -12,6 +12,7 @@ public class PhoneBookTest {
     }
     @Test
     public void findByNumber(){
+        addTest();
         final String findPhonebookExpected = "Денис";
         final String actual = phoneBook.findByNumber("395521");
         Assert.assertEquals(findPhonebookExpected, actual);

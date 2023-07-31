@@ -9,7 +9,12 @@ public class PhoneBook {
         return phoneBook.size();
     }
     public String findByNumber(String numberPhone){
-        return null;
+        for (Map.Entry entry : phoneBook.entrySet()) {
+            if(entry.getValue().equals(numberPhone)){
+                return entry.getKey().toString();
+            }
+        }
+        throw new RuntimeException("Контакта с этим номером нету.");
     }
 
 }
