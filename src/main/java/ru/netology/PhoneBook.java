@@ -16,5 +16,14 @@ public class PhoneBook {
         }
         throw new RuntimeException("Контакта с этим номером нету.");
     }
+    public String findByName(String name){
+        for (Map.Entry entry : phoneBook.entrySet()) {
+            if(entry.getKey().equals(name)){
+                return entry.getValue().toString();
+            }
+        }
+        throw new RuntimeException("Контакта с этим именем нету.");
+    }
+
 
 }
